@@ -113,6 +113,9 @@
         }#text-area:hover {
             background: white;
             color: black !important;
+        } .error {
+        color: red;
+        font-size: 10px;
         }
        
 
@@ -142,12 +145,15 @@
                     <label for="correo">correo electronico</label>
                 </td>
 
-                <td>
+             
+                  <td>
                     <input
-                    type="email" id="correo" placeholder="luffyelchamo@gmail.com" required>
-                </td>     
+                    type="email" id="correo" placeholder="luffyelchamo@gmail.com" required><br>
+                    <span id="emailError" class="error"></span><br>
+                   
+                </td>
             </tr>
-
+            
             
             <tr>
 

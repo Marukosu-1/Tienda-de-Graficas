@@ -8,9 +8,24 @@ function limpiarDato() {
 }
 
 
+function enviarDato() {
+    var correo = document.getElementById("correo").value;
+    var emailError = document.getElementById("emailError");
 
-function enviarDato(){
+    // Patrón para validar email
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    limpiarDato();
+    if (correo.trim() === " ") {
+        emailError.textContent = "El campo de email no puede estar vacío";
+        return false;
+    } else if (!emailPattern.test(correo)) {
+        emailError.textContent = "Ingrese un email válido";
+        return false;
+    } else {
+        emailError.textContent = " ";
+        limpiarDato()
+        return true;
+
+    }
     
 }
